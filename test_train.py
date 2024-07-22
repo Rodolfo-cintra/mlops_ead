@@ -37,7 +37,7 @@ def test_read_data():
     """
     X, y = read_data()
 
-    assert not X.empty
+    assert not X.empty #verifica se existe dado...se o x não é vazio
     assert not y.empty
 
 
@@ -49,7 +49,7 @@ def test_create_model():
     X, _ = read_data()
     model = create_model(X)
 
-    assert len(model.layers) > 2
+    assert len(model.layers) > 2 #modelo tem mais de uma camada
     assert model.trainable
     assert isinstance(model, Sequential)
 
