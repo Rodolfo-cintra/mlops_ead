@@ -122,9 +122,18 @@ def config_mlflow():
     Returns:
         None
     """
-    os.environ['MLFLOW_TRACKING_USERNAME'] = 'renansantosmendes'
-    os.environ['MLFLOW_TRACKING_PASSWORD'] = '6d730ef4a90b1caf28fbb01e5748f0874fda6077'
-    mlflow.set_tracking_uri('https://dagshub.com/renansantosmendes/mlops-ead.mlflow')
+
+    MLFLOW_TRACKING_URI = 'https://dagshub.com/rodolfo403/PUC_PRATICAS_DATAOPS_MLOPS.mlflow'
+    MLFLOW_TRACKING_USERNAME = 'rodolfo403'
+    MLFLOW_TRACKING_PASSWORD = 'b2e7fb7d9e7f367d6bddaa15c6ed01913183fd82'
+
+    os.environ['MLFLOW_TRACKING_USERNAME'] = MLFLOW_TRACKING_USERNAME
+    os.environ['MLFLOW_TRACKING_PASSWORD'] = MLFLOW_TRACKING_PASSWORD
+    mlflow.set_tracking_uri(MLFLOW_TRACKING_URI)
+
+    #os.environ['MLFLOW_TRACKING_USERNAME'] = 'renansantosmendes'
+    #os.environ['MLFLOW_TRACKING_PASSWORD'] = '6d730ef4a90b1caf28fbb01e5748f0874fda6077'
+    #mlflow.set_tracking_uri('https://dagshub.com/renansantosmendes/mlops-ead.mlflow')
 
     mlflow.tensorflow.autolog(log_models=True,
                               log_input_examples=True,
